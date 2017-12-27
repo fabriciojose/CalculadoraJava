@@ -7,7 +7,7 @@
 package calculadorajavagethub;
 
 
-import java.lang.reflect.InvocationTargetException;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -270,10 +270,20 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML 
     private void btnDEL (ActionEvent event){
+        
         String numberDEL = exit1.getText();
-        int lengthNumberDEL = numberDEL.length() - 1;
-        exit1.setText(numberDEL.substring(0, lengthNumberDEL));
-        //System.out.println(); 
+        System.out.println (numberDEL);
+        
+        if (numberDEL.isEmpty()){ // quando não houver nada na saida 1, limpar a saída 2
+            exit2.setText("");
+            countButtonNumber = 1;
+            
+        } else { // caso não haja nenhum número na exit1 (saída 1), limpar também a exit2 (saída 2)
+            
+            int lengthNumberDEL = numberDEL.length() - 1;
+            exit1.setText(numberDEL.substring(0, lengthNumberDEL));
+            //System.out.println(); 
+        }
     }
     
     @Override
