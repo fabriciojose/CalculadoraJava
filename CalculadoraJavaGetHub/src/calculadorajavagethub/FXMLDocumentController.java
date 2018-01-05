@@ -6,7 +6,7 @@
 
 package calculadorajavagethub;
 
-
+/* Teste reinstalação NetBeans */
 
 import java.net.URL;
 import java.util.ResourceBundle;
